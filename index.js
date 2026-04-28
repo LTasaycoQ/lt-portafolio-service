@@ -23,7 +23,7 @@ const transporter = nodemailer.createTransport({
 
 app.post('/evaluacion', async (req, res) => {
     const {
-        name, email
+        name, email, asunto, mensaje
     } = req.body;
 
     try {
@@ -32,7 +32,11 @@ app.post('/evaluacion', async (req, res) => {
             to: "luistasayco3030@gmail.com",
             subject: `Mensaje de Pagina web - ${name}`,
             html: `
-                   hola ${name}
+                
+                <span style="font-weight:600;">Nombre:</span> ${name}
+                <span style="font-weight:600;">Email:</span> ${email}
+                <span style="font-weight:600;">Asunto:</span> ${asunto}
+                <span style="font-weight:600;">Asunto:</span> <br /> ${mensaje}
 
             `,
 
