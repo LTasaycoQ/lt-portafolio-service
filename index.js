@@ -34,8 +34,11 @@ app.post('/evaluacion', async (req, res) => {
             html: `
                 
                 <span style="font-weight:600;">Nombre:</span> ${name}
+                <br /> 
                 <span style="font-weight:600;">Email:</span> ${email}
+                <br /> 
                 <span style="font-weight:600;">Asunto:</span> ${asunto}
+                <br /> 
                 <span style="font-weight:600;">Asunto:</span> <br /> ${mensaje}
 
             `,
