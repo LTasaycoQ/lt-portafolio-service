@@ -21,7 +21,7 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-app.post('/evaluacion', async (req, res) => {
+app.post('/contact-luis', async (req, res) => {
     const {
         name, email, asunto, mensaje
     } = req.body;
